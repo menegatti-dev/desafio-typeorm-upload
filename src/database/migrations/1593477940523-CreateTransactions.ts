@@ -25,7 +25,9 @@ export default class CreateTransactions1593477940523
           },
           {
             name: 'value',
-            type: 'float8',
+            type: 'decimal',
+            precision: 10,
+            scale: 2,
           },
           {
             name: 'type',
@@ -37,6 +39,16 @@ export default class CreateTransactions1593477940523
             name: 'category_id',
             type: 'uuid',
             isNullable: true,
+          },
+          {
+            name: 'created_at',
+            type: 'timestamp',
+            default: 'now()',
+          },
+          {
+            name: 'updated_at',
+            type: 'timestamp',
+            default: 'now()',
           },
         ],
       }),
